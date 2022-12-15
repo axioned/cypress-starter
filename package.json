@@ -1,0 +1,29 @@
+{
+  "name": "asa-cypress",
+  "version": "1.0.0",
+  "description": "```bash\r git clone git@github.com:axioned/asa-cypress.git",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open --browser chrome",
+    "cy:run": "cypress run --browser chrome",
+    "cy:run:head": "cypress run --headed --browser chrome",
+    "cy:run:firefox": "cypress run --browser firefox",
+    "cy:run:firefox:head": "cypress run --headed --browser firefox",
+    "allBrowser": "concurrently --kill-others \"npm run cy:run:firefox:head\" \"npm run cy:run:head\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axioned/asa-cypress.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/axioned/asa-cypress/issues"
+  },
+  "homepage": "https://github.com/axioned/asa-cypress#readme",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "cypress": "^10.11.0",
+    "playwright-webkit": "^1.28.1"
+  }
+}
