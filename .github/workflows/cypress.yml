@@ -1,0 +1,36 @@
+name: E2E on Chrome, Webkit(safari), Edge
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+  # schedule:
+     # runs tests every 1 hours
+  #   - cron: '0 */1 * * *'
+jobs:
+  cypress-run:
+    runs-on: ubuntu-20.04
+    # let's make sure our tests pass on Chrome browser
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Build on Chrome
+      uses: cypress-io/github-action@v4
+      with:
+        browser: chrome
+
+#     - name: Build on WebKit
+#       uses: cypress-io/github-action@v4
+#       with:
+#         build: npx playwright install-deps webkit
+#         browser: webkit
+
+#     - name: Build on Edge
+#       uses: cypress-io/github-action@v4
+#       with:
+#         browser: edge
+
+# env:
+#   SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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
+#   CI_PROJECT_REPONAME: asa-cypress  
