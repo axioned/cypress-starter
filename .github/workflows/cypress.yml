@@ -30,7 +30,3 @@ jobs:
 #       uses: cypress-io/github-action@v4
 #       with:
 #         browser: edge
-
-# env:
-#   SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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
-#   CI_PROJECT_REPONAME: asa-cypress  
