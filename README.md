@@ -22,6 +22,8 @@ To verify Node.js version, run the following in your terminal:
 ```bash
 node -v
 ```
+Use Vscode for writing script (*Recommended*)
+    - [Vscode download link](https://code.visualstudio.com/download)
 
 ## Clone the repository
 
@@ -42,7 +44,7 @@ To install cypress, run the following command (skip if already installed):
 npm install cypress --save-dev
 ```
 
-## Install all packages (required)
+## Install all packages (Recommended)
 ```bash
 npm install
 ```
@@ -64,7 +66,7 @@ This will run cypress test for Chrome and Mozilla ( We can add additional browse
 ## Writing test cases
 
 1. We can start writing test cases in cypress/e2e
-2. Add file name according to test cases and then add - `***.cy.js***`
+2. Add file name according to test cases and then add - `.cy.js`
 
 ## Git Actions Workflow and Setup files
 1. The current package consist of basic deployment scripts which can be find inside `.github/workflows` folder curenly they are some commented script.
@@ -75,3 +77,5 @@ This will run cypress test for Chrome and Mozilla ( We can add additional browse
     - `your-git-repo -> actions -> click on any workflow -> Run work workflow dropdown -> select branch -> run workflow`
 5. We have commented code for running the script for mozilla and webkit ( Safari ) as it will consume time for running the script for all the browsers.
 6. Scheduling script as also be commented. If we want we can uncomment those line.
+    - How to change the schedule time? 
+        - [Cron Guru](https://crontab.guru/) : Reference link
