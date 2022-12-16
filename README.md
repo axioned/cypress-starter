@@ -1,4 +1,4 @@
-# Axioend Cypress Starter
+# Axioned Cypress Starter
 
 ## How to use this repo?
 
