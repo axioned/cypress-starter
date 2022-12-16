@@ -1,18 +1,27 @@
-# AXIONED Cypress Starter Repository
+# Axioend Cypress Starter
+
+## How to use this repo?
+
+- Click on the 'Use this template' button above, create a new repository
+- Make sure your client repositories are always private
+- Give it a clear name. We advice the format `clientname-projectname-app` (eg: `acme-saas-api`)
+- After your repo is created - remove this section
 
 ## Prerequisite
+- Node.js (14.x, 16.x, 18.x and above)
 
-Need node to be installed in your system
+You find the latest and most up-to-date system requirements on [Cypress' documentation site](https://docs.cypress.io/guides/getting-started/installing-cypress).
 
-currently we have tested on node version 12.22.7
+### How to install Node.js
 
-How to install node?
+Follow the Cypress' documentation for [installation instructions](https://docs.cypress.io/guides/getting-started/installing-cypress#Installing).
 
-1. Go to the Node.js Downloads page - https://nodejs.org/en/download/
-2. Download Node.js for macOS by clicking the "Macintosh Installer" option and for Windows by clicking on Windows Installer
-3. Run the downloaded Node.js .pkg Installer
-4. Run the installer, including accepting the license, selecting the destination, and authenticating for the install.
-5. To verify node js is installed run node -v command in terminal
+If you already have `npm` or `yarn` installed then refer to that section. Else, head on over to the [Direct download](https://docs.cypress.io/guides/getting-started/installing-cypress#Direct-download) section and run the installer.
+
+To verify Node.js version, run the following in your terminal:
+```bash
+node -v
+```
 
 ## Clone the repository
 
