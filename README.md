@@ -16,6 +16,7 @@ How to install node?
 6. If there is any issue installing node please reach out to the IT support team.
 
 Use Vscode for writing script (*Recommended*)
+    - [Vscode download link](https://code.visualstudio.com/download)
 
 ## Clone the repository
 
@@ -36,7 +37,7 @@ To install cypress, run the following command (skip if already installed):
 npm install cypress --save-dev
 ```
 
-## Install all packages (required)
+## Install all packages (Recommended)
 ```bash
 npm install
 ```
