@@ -25,6 +25,8 @@ node -v
 Use Vscode for writing script (*Recommended*)
     - [Vscode download link](https://code.visualstudio.com/download)
 
+## Install Git
+[Git Installation link](https://git-scm.com/downloads)
 ## Clone the repository
 
 ```bash
@@ -49,6 +51,18 @@ npm install cypress --save-dev
 npm install
 ```
 
+## NVM installation (optional)
+
+1. If npm installation is failed it may due to node version issue
+2. Steps to installation nvm for windows/mac/linux and repective commands can be found [here](https://www.freecodecamp.org/news/nvm-for-windows-how-to-download-and-install-node-version-manager-in-windows-10/)
+3. If above steps didn't help please take IT support team for installation.
+4. Once above step is done run `nmp install` again
+
+## Writing test cases
+
+1. We can start writing test cases in cypress/e2e
+2. Add file name according to test cases and then add - `.cy.js`
+
 ## Running Cypress
 ```bash
 npx cypress open
@@ -62,11 +76,6 @@ npx cypress open
 npm run allBrowser
 ```
 This will run cypress test for Chrome and Mozilla ( We can add additional browser as well ).
-
-## Writing test cases
-
-1. We can start writing test cases in cypress/e2e
-2. Add file name according to test cases and then add - `.cy.js`
 
 ## Git Actions Workflow and Setup files
 1. The current package consist of basic deployment scripts which can be find inside `.github/workflows` folder curenly they are some commented script.
