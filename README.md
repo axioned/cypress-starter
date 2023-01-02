@@ -8,7 +8,7 @@
 - After your repo is created - remove this section
 
 ## Prerequisite
-- Node.js (14.x, 16.x, 18.x and above)
+- Node.js (12.x, 14.x, 16.x, 18.x and above)
 
 You find the latest and most up-to-date system requirements on [Cypress' documentation site](https://docs.cypress.io/guides/getting-started/installing-cypress).
 
