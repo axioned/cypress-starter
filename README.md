@@ -56,7 +56,7 @@ npm install
 1. If npm installation is failed it may due to node version issue
 2. Steps to installation nvm for windows/mac/linux and repective commands can be found [here](https://www.freecodecamp.org/news/nvm-for-windows-how-to-download-and-install-node-version-manager-in-windows-10/)
 3. If above steps didn't help please take IT support team for installation.
-4. Once above step is done run `nmp install` again
+4. Once above step is done run `npm install` again
 
 ## Writing test cases
 
