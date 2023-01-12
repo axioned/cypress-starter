@@ -96,7 +96,7 @@ This will run cypress test for Chrome and Mozilla ( We can add additional browse
 ### Fetching Data from Google Sheet
 1. Create a sheet and make the sheet publlic.
 2. Get sheet id:
-    - https://docs.google.com/spreadsheets/d/<mark>1DyCkn0cQvYOlAbvcW0MgXIZA38o2WBWk4sE5641QALc</mark>/edit#gid=0
+    - `https://docs.google.com/spreadsheets/d/Here-is-the-sheet-ID/edit#gid=0`
     - The text in yellow is the sheet ID.
 3. In Google Search Console, Google Sheet API must be enabled.
     - Go to the google cloud console
@@ -109,7 +109,7 @@ This will run cypress test for Chrome and Mozilla ( We can add additional browse
     - There will be a drop-down menu in the blue header; select it to start a new project.
     - In API & Services go to Credentials -> Create Credentials -> API key. This will create a new API key
 5. After that add your Sheet Id and API key in the below mention URL
-    - https://sheets.googleapis.com/v4/spreadsheets/SHEET_ID/values/data?key=API_KEY
+    - `https://sheets.googleapis.com/v4/spreadsheets/SHEET_ID/values/data?key=API_KEY`
 6. Steps doc [link](https://docs.google.com/document/d/1wkjLF2o8HsyXwZ-DcuZnb1JYHF6j4X2wS96jBO6m9AM/edit?pli=1)
 7. Code Steps are added in cypress/support/e2e.js file
 
