@@ -88,3 +88,59 @@ This will run cypress test for Chrome and Mozilla ( We can add additional browse
 6. Scheduling script as also be commented. If we want we can uncomment those line.
     - How to change the schedule time? 
         - [Cron Guru](https://crontab.guru/) : Reference link
+
+## Fetching Data from google sheet/excel sheet
+1. Here for using sheet/excel data in cypress we need to convert the data in json format and saving the dataset in json format in fixtures folder
+2. For fetching the json data we are going to use cy.fixture(). Demo code is mentioned in *demo.cy.js* file
+
+### Fetching Data from Google Sheet
+1. Create a sheet and make the sheet publlic.
+2. Get sheet id:
+    - https://docs.google.com/spreadsheets/d/<mark>1DyCkn0cQvYOlAbvcW0MgXIZA38o2WBWk4sE5641QALc</mark>/edit#gid=0
+    - The text in yellow is the sheet ID.
+3. In Google Search Console, Google Sheet API must be enabled.
+    - Go to the google cloud console
+    - Click on API & Services
+    - In API & Services go to Enable API and Services and click on ENABLE API & SERVICES
+    - Search Google Workspace and click on it then select Google Sheets API. Then click on Enable
+4. To retrieve the data in JSON format, we must create an API key.
+    - Go to the google cloud console
+    - Click on API & Services
+    - There will be a drop-down menu in the blue header; select it to start a new project.
+    - In API & Services go to Credentials -> Create Credentials -> API key. This will create a new API key
+5. After that add your Sheet Id and API key in the below mention URL
+    - https://sheets.googleapis.com/v4/spreadsheets/SHEET_ID/values/data?key=API_KEY
+6. Steps doc [link](https://docs.google.com/document/d/1wkjLF2o8HsyXwZ-DcuZnb1JYHF6j4X2wS96jBO6m9AM/edit?pli=1)
+7. Code Steps are added in cypress/support/e2e.js file
+
+### Fetching Data from Excel Sheet locally added in cypress
+1. For achieving this we need to install a pacakage
+    - `npm install node-xlsx --save-dev` : Run this command
+2. Add below code inside *setupNodeEvents* in *cypress.config.js* file
+```json
+on("task", {
+parseXlsx({ filePath }) {
+    return new Promise((resolve, reject) => {
+    try {
+        const jsonData = xlsx.parse(fs.readFileSync(filePath));
+        resolve(jsonData);
+    } catch (e) {
+        reject(e);
+    }
+    });
+}
+});
+```
+3. Also add below code at start of *cypress.config.js* file
+```
+const xlsx = require("node-xlsx").default;
+const fs = require("fs");
+const path = require("path");
+```
+4. Add below code inside *commands.js* inside *cypress/support* file
+```
+Cypress.Commands.add('parseXlsx', (inputFile) => {
+  return cy.task('parseXlsx', { filePath: inputFile })
+})
+```
+5. Code Steps are added in cypress/support/e2e.js file
