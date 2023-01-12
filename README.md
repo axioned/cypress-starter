@@ -117,7 +117,7 @@ This will run cypress test for Chrome and Mozilla ( We can add additional browse
 1. For achieving this we need to install a pacakage
     - `npm install node-xlsx --save-dev` : Run this command
 2. Add below code inside *setupNodeEvents* in *cypress.config.js* file
-```json
+```
 on("task", {
 parseXlsx({ filePath }) {
     return new Promise((resolve, reject) => {
