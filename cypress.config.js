@@ -1,4 +1,7 @@
 const { defineConfig } = require("cypress");
+const xlsx = require("node-xlsx").default;
+const fs = require("fs");
+const path = require("path");
 
 module.exports = defineConfig({
   e2e: {
@@ -6,8 +9,19 @@ module.exports = defineConfig({
     viewportHeight: 900,
     defaultCommandTimeout: 70000, //Global wait time can be changed here
     setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
+      on("task", {
+        parseXlsx({ filePath }) {
+          return new Promise((resolve, reject) => {
+            try {
+              const jsonData = xlsx.parse(fs.readFileSync(filePath));
+              resolve(jsonData);
+            } catch (e) {
+              reject(e);
+            }
+          });
+        }
+      });
+    }
   },
   experimentalWebKitSupport: true,
   "projectId": 'your_prj_id',
