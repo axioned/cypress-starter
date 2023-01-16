@@ -94,6 +94,9 @@ This will run cypress test for Chrome and Mozilla ( We can add additional browse
 2. For fetching the json data we are going to use cy.fixture(). Demo code is mentioned in *demo.cy.js* file
 
 ### Fetching Data from Google Sheet
+
+***Note: If google sheet approach is not in used remove unused code from their respective file***
+
 1. Create a sheet and make the sheet publlic.
 2. Get sheet id:
     - `https://docs.google.com/spreadsheets/d/Here-is-the-sheet-ID/edit#gid=0`
@@ -111,9 +114,12 @@ This will run cypress test for Chrome and Mozilla ( We can add additional browse
 5. After that add your Sheet Id and API key in the below mention URL
     - `https://sheets.googleapis.com/v4/spreadsheets/SHEET_ID/values/data?key=API_KEY`
 6. Steps doc [link](https://docs.google.com/document/d/1wkjLF2o8HsyXwZ-DcuZnb1JYHF6j4X2wS96jBO6m9AM/edit?pli=1)
-7. Code Steps are added in cypress/support/e2e.js file
+7. Code Steps are added in `cypress/support/e2e.js` file
 
 ### Fetching Data from Excel Sheet locally added in cypress
+
+***Note: If excel approach is not in used remove unused code from their respective file***
+
 1. For achieving this we need to install a pacakage
     - `npm install node-xlsx --save-dev` : Run this command
 2. Add below code inside *setupNodeEvents* in *cypress.config.js* file
